@@ -4,11 +4,27 @@ OpenAI‑compatible DeepSeek provider for Clawdbot. Adds `deepseek` provider aut
 
 ## Install (local dev)
 
-```bash
-# from your repo root
-clawdbot plugins enable deepseek-provider
-# or add to clawdbot.json plugins.load.paths
+**Recommended location:**
 ```
+~/.clawdbot/extensions/clawdbot_deepseek_plugin
+```
+
+Clone into the extensions directory so the plugin can be discovered:
+```bash
+mkdir -p ~/.clawdbot/extensions
+cd ~/.clawdbot/extensions
+
+git clone git@github.com:wonca/clawdbot_deepseek_plugin.git
+```
+
+> The default folder name will be `clawdbot_deepseek_plugin` (normal for GitHub repos).
+
+Enable the plugin:
+```bash
+clawdbot plugins enable deepseek-provider
+```
+
+(Alternative) You can also point to the folder via `plugins.load.paths` in `clawdbot.json`.
 
 ## Login
 
@@ -58,3 +74,19 @@ agents: {
   }
 }
 ```
+
+## Set DeepSeek as default (global)
+
+```bash
+clawdbot models set deepseek/deepseek-chat
+```
+
+## Set DeepSeek for a specific agent
+
+```bash
+clawdbot agents add deesee --workspace ~/clawd-deesee --model deepseek/deepseek-chat --non-interactive
+# or update an existing agent in clawdbot.json:
+# agents.list[].model.primary = "deepseek/deepseek-chat"
+```
+
+> 你也可以把这篇文档交给 Clawdbot，它自己会操作。

@@ -1,0 +1,18 @@
+{
+  "name": "@wonka/deepseek-provider",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Clawdbot plugin: DeepSeek (OpenAI-compatible) provider auth + config helper.",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "clawdbot.plugin.json",
+    "README.md"
+  ],
+  "keywords": ["clawdbot", "plugin", "deepseek", "provider"],
+  "license": "MIT",
+  "clawdbot": {
+    "extensions": ["./index.ts"]
+  }
+}

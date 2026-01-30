@@ -89,4 +89,5 @@ clawdbot agents add deesee --workspace ~/clawd-deesee --model deepseek/deepseek-
 # agents.list[].model.primary = "deepseek/deepseek-chat"
 ```
 
+> You can also hand this document to Clawdbot and it will perform the steps for you.
 > 你也可以把这篇文档交给 Clawdbot，它自己会操作。
